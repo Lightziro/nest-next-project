@@ -1,0 +1,31 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "dev-client": "next dev"
+  },
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "next": "^12.2.2",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-spring": "^9.5.0",
+    "socket.io-client": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.5",
+    "@types/react": "^18.0.15",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+docker-compose up -d --build --remove-orphans
+
+sleep 10
+
+"${__dir}/frontend" npm install
+"${__dir}/backend" npm install
+
+"${__dir}/backend" npm run dev
+"${__dir}/frontend" npm run dev-client
+
+printf "\nAccess up project"

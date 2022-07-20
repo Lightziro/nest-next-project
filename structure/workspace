@@ -1,0 +1,22 @@
+#!/bin/bash
+
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${__dir}" || exit 1
+
+if [ $# -gt 0 ];then
+    if [[ "$1" == "backend" ]]; then
+        shift 1
+        docker-compose exec node bash -c "$*"
+    elif [[ "$1" == "frontend" ]]; then
+        shift 1
+        docker-compose exec nextjs bash -c "$*"
+    elif [[ "$1" == "yarn" ]]; then
+        shift 1
+        CMD='yarn '"$*"
+    else
+        CMD="$*"
+    fi
+else
+    docker-compose ps
+fi

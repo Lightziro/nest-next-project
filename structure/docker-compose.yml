@@ -1,0 +1,57 @@
+version: "3.7"
+services:
+  backend:
+    container_name: node-backend
+    image: node:14
+    restart: unless-stopped
+    working_dir: /var/www/
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../backend/:/var/www/
+
+  socket:
+    container_name: socket
+    image: node:14
+    restart: unless-stopped
+    working_dir: /var/www/
+    tty: true
+    ports:
+      - "6001:6001"
+    volumes:
+      - ../socket/:/var/www/
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - $MYSQLDB_DOCKER_PORT:$MYSQLDB_DOCKER_PORT
+    volumes:
+      - ./mysql:/var/lib/mysql
+#  rabbitmq:
+#      image: "rabbitmq:3-management"
+#      container_name: rabbitmq
+#      restart: unless-stopped
+#      hostname: "rabbit"
+#      environment:
+#        RABBITMQ_DEFAULT_USER: "admin"
+#        RABBITMQ_DEFAULT_PASS: "02022002"
+#      ports:
+#          - "15672:15672"
+#          - "5672:5672"
+  nextjs:
+    container_name: nextJs
+    image: "node:14"
+    restart: unless-stopped
+    working_dir: /var/www/
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../frontend:/var/www/
