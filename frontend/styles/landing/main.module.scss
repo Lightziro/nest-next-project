@@ -1,0 +1,120 @@
+.headerItem {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 50px;
+  border-radius: 25px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .3s ease;
+  text-align: center;
+  padding: 0 20px;
+
+  &.active, &:hover {
+    color: #8e9296;
+    background: #e1e1e3;
+  }
+}
+
+.wrapperHeader {
+  margin-bottom: 100px;
+}
+
+.wrapperMain {
+  font-style: normal;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  letter-spacing: 0.2px;
+  color: #1E1F4B;
+  margin-bottom: 42px;
+}
+
+.cooperationWrapper {
+  background: rgba(112, 111, 229, 0.02);
+  padding: 30px 40px;
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #1E1F4B;
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+}
+
+.itemWatch {
+  cursor: pointer;
+}
+
+.watchIcon {
+  transition: all .4s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.buttonContact {
+  background: #2E3E5C;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 15px 40px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all .3s ease;
+
+  &:hover {
+    background: #706FE5;
+  }
+}
+
+.pictureMain {
+}
+
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  opacity: .8;
+  margin-bottom: 24px;
+}
+
+.footer {
+  background: #2E3E5C;
+  padding: 50px 0;
+
+  .itemPage {
+    transition: all .3s ease;
+    padding-right: 50px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+  }
+}
