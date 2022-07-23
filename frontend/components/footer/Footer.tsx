@@ -32,7 +32,7 @@ const Footer: NextPage = () => {
             </Grid>
           </Grid>
           <Grid item className={classes.copyright}>
-            © 2022 «АйТиХаб»
+            © 2022 «АйТиХаб» - Все права защищены
           </Grid>
         </Grid>
       </MainContainer>

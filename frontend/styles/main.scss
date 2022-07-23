@@ -58,20 +58,6 @@ header {
   }
 }
 
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: fixed;
-  justify-content: space-between;
-  bottom: 0;
-  width: 100%;
-  background: #c8e6fc;
-  font-size: 18px;
-  height: auto;
-  padding: 10px 20px;
-}
-
 .items-container {
   display: flex;
   align-items: center;

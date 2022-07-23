@@ -1,0 +1,27 @@
+.wrapperHeader {
+  position: fixed;
+  top: 0;
+  background: #fcfcfe;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.headerItem {
+  font-family: 'Outfit', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 50px;
+  border-radius: 25px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .3s ease;
+  text-align: center;
+  padding: 5px 20px;
+
+  &.active, &:hover {
+    color: #8e9296;
+    background: #e1e1e3;
+  }
+}

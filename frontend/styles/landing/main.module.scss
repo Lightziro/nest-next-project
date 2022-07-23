@@ -1,24 +1,6 @@
-.headerItem {
-  font-family: 'Outfit', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 50px;
-  border-radius: 25px;
-  height: 50px;
-  cursor: pointer;
-  transition: all .3s ease;
-  text-align: center;
-  padding: 0 20px;
 
-  &.active, &:hover {
-    color: #8e9296;
-    background: #e1e1e3;
-  }
-}
-
-.wrapperHeader {
-  margin-bottom: 100px;
+.container {
+  margin-top: 120px;
 }
 
 .wrapperMain {
@@ -36,22 +18,24 @@
 
 .cooperationWrapper {
   background: rgba(112, 111, 229, 0.02);
-  padding: 30px 40px;
+  margin-bottom: 50px;
+  padding: 40px 0;
 
   .title {
-    font-size: 20px;
+    font-size: 32px;
     line-height: 24px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+
     text-transform: capitalize;
     color: #1E1F4B;
     margin-bottom: 50px;
   }
-
   .logo {
     width: 100%;
   }
+
+
 }
 
 .itemWatch {
@@ -89,8 +73,36 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 36px;
-  opacity: .8;
   margin-bottom: 24px;
+}
+.aboutWrapper {
+  .title {
+    color: #1E1F4B;;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    color: #1B1D21;
+  }
+  .icon{
+    width: 100px;
+  }
+  .priorityItem{
+    .text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      color: #1E1F4B;
+    }
+    .explanation {
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #2E3E5C;
+    }
+  }
 }
 
 .footer {

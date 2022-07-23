@@ -1,4 +1,5 @@
-import { Item } from "../ts/types/additional";
+import { Item, UIItem } from "../ts/types/additional";
+import { AdvantageItem } from "../components/section/main/about-company/children/AdvantageItem";
 
 const HEADER_ITEMS: Item[] = [
   {
@@ -24,4 +25,18 @@ const FOOTER_ITEMS: Item[] = [
     value: "/contacts",
   },
 ];
-export { HEADER_ITEMS, FOOTER_ITEMS };
+const ADVANTAGE_ITEMS: UIItem[] = [
+  {
+    img: "/images/icons/animation/calendar.gif",
+    title: "Срок выполнения",
+    description:
+      "Мы ценим ваше время и всегда укладываемся в срок выполнения задачи",
+  },
+  {
+    img: "/images/icons/animation/computer.gif",
+    title: "Современные технологии",
+    description:
+      "Наши решения и продукты строятся на основе современных технологиях",
+  },
+];
+export { HEADER_ITEMS, FOOTER_ITEMS, ADVANTAGE_ITEMS };

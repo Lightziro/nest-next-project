@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Header from "../components/header/Header";
+import Header from "../components/basic/header/Header";
 import Footer from "../components/footer/Footer";
 
 interface MainLayout {
