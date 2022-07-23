@@ -7,7 +7,7 @@ cd "${__dir}" || exit 1
 if [ $# -gt 0 ];then
     if [[ "$1" == "backend" ]]; then
         shift 1
-        docker-compose exec node bash -c "$*"
+        docker-compose exec backend bash -c "$*"
     elif [[ "$1" == "frontend" ]]; then
         shift 1
         docker-compose exec nextjs bash -c "$*"

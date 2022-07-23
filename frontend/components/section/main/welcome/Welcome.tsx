@@ -11,31 +11,40 @@ export const Welcome: React.FC = () => {
     enter: { opacity: 1, transform: "translate3d(0,0,0)" },
     delay: 50,
   });
+  const transitionBlock = useTransition(null, {
+    from: { opacity: 0, transform: "translate3d(-100%,0,0)" },
+    enter: { opacity: 1, transform: "translate3d(0,0,0)" },
+    delay: 50,
+  })
   return (
     <MainContainer>
       <Grid container direction="row">
-        <Grid
-          className={classes.wrapperMain}
-          item
-          container
-          direction="column"
-          {...HALF_GRID}
-          xs={12}
-          sm={7}
-        >
-          <Grid item>
-            <div className={classes.title}>Мы создаём лучшие продукты</div>
-          </Grid>
-          <Grid item>
-            <p className={classes.description}>
-              Help find solutions with intitutive and in accordance with client
-              business goals. we provide a high-quality services.
-            </p>
-          </Grid>
-          <Grid item>
-            <button className={classes.buttonContact}>Связаться с нами</button>
-          </Grid>
-        </Grid>
+        {
+          transitionBlock((style, item) => (
+              <Grid
+                  className={classes.wrapperMain}
+                  item
+                  container
+                  direction="column"
+                  {...HALF_GRID}
+                  xs={12}
+                  sm={7}
+              >
+                <Grid item>
+                  <animated.div style={{ ...style }} className={classes.title}>Мы создаём лучшие продукты</animated.div>
+                </Grid>
+                <Grid item>
+                  <animated.p style={{ ...style }} className={classes.description}>
+                    Help find solutions with intitutive and in accordance with client
+                    business goals. we provide a high-quality services.
+                  </animated.p>
+                </Grid>
+                <Grid item>
+                  <animated.button className={classes.buttonContact} style={{ ...style }}>Связаться с нами</animated.button>
+                </Grid>
+              </Grid>
+          ))
+        }
 
         {transitionPicture((style, item) => (
           <Grid xs={false} sm={5} md={6} lg={6} xl={6} item>
