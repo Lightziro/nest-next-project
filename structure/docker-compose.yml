@@ -11,6 +11,16 @@ services:
     volumes:
       - ../backend/:/var/www/
 
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d/nginx.conf:/etc/nginx/conf.d/default.conf
+
   socket:
     container_name: socket
     image: node:14
@@ -30,6 +40,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
       - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - TZ=Europe/Moscow
     ports:
       - $MYSQLDB_DOCKER_PORT:$MYSQLDB_DOCKER_PORT
     volumes:

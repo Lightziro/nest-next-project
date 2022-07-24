@@ -20,19 +20,32 @@ const Header: NextPage = () => {
   return (
     <div className={classes.wrapperHeader}>
       <MainContainer>
-        <Grid container lg={12} xl={12} md={12} alignContent="center">
-          <Grid xs={12} sm={4} md={4} lg={4} xl={4} item>
-            <img alt="Company logo" src="/images/logo.svg" />
+        <Grid container alignContent="center">
+          <Grid
+            justifyContent={{ sm: "center", xs: "center" }}
+            xs={12}
+            sm={12}
+            md={4}
+            lg={4}
+            xl={4}
+            item
+          >
+            <img
+              className={classes.logo}
+              alt="Company logo"
+              src="/images/logo.svg"
+            />
           </Grid>
           <Grid
             container
-            spacing={8}
+            spacing={4}
             xs={12}
-            sm={8}
+            sm={12}
             md={8}
             lg={8}
             xl={8}
             item
+            justifyContent={{ sm: "center", xs: "center" }}
             direction="row"
             alignContent="center"
           >

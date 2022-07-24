@@ -11,8 +11,8 @@ const HEADER_ITEMS: Item[] = [
     value: "/services",
   },
   {
-    label: "Проекты",
-    value: "/projects",
+    label: "Контакты",
+    value: "/contacts",
   },
 ];
 const FOOTER_ITEMS: Item[] = [
@@ -39,4 +39,18 @@ const ADVANTAGE_ITEMS: UIItem[] = [
       "Наши решения и продукты строятся на основе современных технологиях",
   },
 ];
-export { HEADER_ITEMS, FOOTER_ITEMS, ADVANTAGE_ITEMS };
+const CONTACT_ITEMS: UIItem[] = [
+  {
+    title: "E-mail",
+    description: "ithub-company@yandex.ru",
+  },
+  {
+    title: "Телефон",
+    description: "+7 (953) 693-00-70",
+  },
+  {
+    title: "Адрес",
+    description: "610017, г.Киров, ул.Карла Либкнехта, 106, оф.2",
+  },
+];
+export { HEADER_ITEMS, FOOTER_ITEMS, ADVANTAGE_ITEMS, CONTACT_ITEMS };

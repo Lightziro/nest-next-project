@@ -24,7 +24,9 @@ const Footer: NextPage = () => {
           >
             <Grid item>
               {FOOTER_ITEMS.map((item) => (
-                <span className={classes.itemPage}>{item.label}</span>
+                <span key={item.value} className={classes.itemPage}>
+                  {item.label}
+                </span>
               ))}
             </Grid>
             <Grid item>

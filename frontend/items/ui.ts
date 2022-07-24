@@ -26,3 +26,10 @@ export const ONE_SIXTH = {
   lg: 2,
   xl: 2,
 };
+export const FULL_GRID = {
+  xs: 12,
+  sm: 12,
+  md: 12,
+  lg: 12,
+  xl: 12,
+};
