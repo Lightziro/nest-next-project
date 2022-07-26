@@ -7,7 +7,7 @@ import { CONTACT_ITEMS } from "../../../../items/menu";
 export const Information: React.FC = () => {
   return (
     <Grid {...HALF_GRID} xs={12} sm={12} item container direction="column">
-      <span className={classes.titleContact}>Контакты</span>
+      <span className="title-text">Контакты</span>
       <Grid container direction="column" spacing={2}>
         {CONTACT_ITEMS.map((item) => (
           <Grid

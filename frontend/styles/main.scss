@@ -133,50 +133,23 @@ header {
   }
 }
 
-
-.wrapper-navigator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 5.1vw;
-  right: 3vw;
-
-  .first, .second {
-    cursor: pointer;
-    width: 6vw;
-    height: 6vw;
-    background-color: #8ac1ff;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .first {
-    border-radius: 2.5vw 0 0 2.5vw;
-    background-color: #a2ccfb !important;
-    background-image: url("/images/icons/left-arrow.png");
-  }
-
-  .second {
-    border-radius: 0 2.5vw 2.5vw 0;
-    background-image: url("/images/icons/right-arrow.png");
-  }
+.title-text {
+  font-weight: 700;
+  font-size: 60px;
+  color: #1E1F4B;
+  line-height: 70px;
+  margin-bottom: 30px;
+  letter-spacing: 0.2px;
 }
 
-.picture-wrapper {
-  width: 100%;
-}
-
-.wrapper-item {
-  height: 100%;
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 24px;
 }
 
 p {
   padding: 0;
   margin: 0;
-}
-
-.description {
-  font-size: 1.5vw;
 }

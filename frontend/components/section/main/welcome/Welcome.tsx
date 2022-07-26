@@ -35,12 +35,12 @@ export const Welcome: React.FC<Welcome> = ({ setOpen }) => {
             sm={7}
           >
             <Grid item>
-              <animated.div style={{ ...style }} className={classes.title}>
+              <animated.div style={{ ...style }} className="title-text">
                 Мы создаём лучшие продукты
               </animated.div>
             </Grid>
             <Grid item>
-              <animated.p style={{ ...style }} className={classes.description}>
+              <animated.p style={{ ...style }} className="description">
                 Компания "АйТиХаб" занимается разработкой веб-приложений,
                 сервисов и оптимизацией бизнес-процессов для улучшения бизнеса
                 клиентов.
