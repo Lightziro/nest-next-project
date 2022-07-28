@@ -53,4 +53,21 @@ const CONTACT_ITEMS: UIItem[] = [
     description: "610017, г.Киров, ул.Карла Либкнехта, 106, оф.2",
   },
 ];
-export { HEADER_ITEMS, FOOTER_ITEMS, ADVANTAGE_ITEMS, CONTACT_ITEMS };
+const SUPPORT_ITEMS = [
+  "Устранение недочётов в работе сайта;",
+  "Оптимизация и доработка модулей;",
+  "Управление и резервирование данных.",
+];
+const WEBSITE_ITEMS = [
+  "Использование современных технологий, которые легко оптимизируются;",
+  "Оптимизация и доработка модулей;",
+  "Своевременное выполнение требуемых работ.",
+];
+export {
+  HEADER_ITEMS,
+  FOOTER_ITEMS,
+  ADVANTAGE_ITEMS,
+  CONTACT_ITEMS,
+  SUPPORT_ITEMS,
+  WEBSITE_ITEMS,
+};

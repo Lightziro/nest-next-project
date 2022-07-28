@@ -21,17 +21,6 @@ services:
     volumes:
       - ./nginx/conf.d/nginx.conf:/etc/nginx/conf.d/default.conf
 
-  socket:
-    container_name: socket
-    image: node:14
-    restart: unless-stopped
-    working_dir: /var/www/
-    tty: true
-    ports:
-      - "6001:6001"
-    volumes:
-      - ../socket/:/var/www/
-
   mysql:
     image: mysql:8.0
     container_name: mysql
@@ -45,17 +34,7 @@ services:
       - $MYSQLDB_DOCKER_PORT:$MYSQLDB_DOCKER_PORT
     volumes:
       - ./mysql:/var/lib/mysql
-#  rabbitmq:
-#      image: "rabbitmq:3-management"
-#      container_name: rabbitmq
-#      restart: unless-stopped
-#      hostname: "rabbit"
-#      environment:
-#        RABBITMQ_DEFAULT_USER: "admin"
-#        RABBITMQ_DEFAULT_PASS: "02022002"
-#      ports:
-#          - "15672:15672"
-#          - "5672:5672"
+
   nextjs:
     container_name: nextJs
     image: "node:14"

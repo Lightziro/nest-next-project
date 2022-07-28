@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { MainContainer } from "../../../ui/MainContainer";
 import { Grid } from "@mui/material";
 import classes from "../../../../styles/landing/main.module.scss";
 import { HALF_GRID } from "../../../../items/ui";
 import { animated, useTransition } from "react-spring";
-import { ContactModal } from "../../../smart/contact-modal/ContactModal";
 
 interface Welcome {
   setOpen: () => void;
@@ -48,7 +47,7 @@ export const Welcome: React.FC<Welcome> = ({ setOpen }) => {
             </Grid>
             <Grid item>
               <animated.button
-                className={classes.buttonContact}
+                className="button-contact"
                 style={{ ...style }}
                 onClick={setOpen}
               >

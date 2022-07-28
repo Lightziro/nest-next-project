@@ -15,7 +15,7 @@ const Contacts: NextPage = () => {
           <Map />
         </Grid>
         <Divider sx={{ my: 3 }} />
-        <div className={classes.helpText}>
+        <div className="help-text">
           Мы всегда готовы помочь с решением и оптимизацией ваших
           бизнес-процессов для ускорения работы вашего бизнеса
         </div>

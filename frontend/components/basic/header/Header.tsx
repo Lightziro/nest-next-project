@@ -30,11 +30,13 @@ const Header: NextPage = () => {
             xl={4}
             item
           >
-            <img
-              className={classes.logo}
-              alt="Company logo"
-              src="/images/logo.svg"
-            />
+            <Link href="/">
+              <img
+                className={classes.logo}
+                alt="Company logo"
+                src="/images/result-logo.svg"
+              />
+            </Link>
           </Grid>
           <Grid
             container
