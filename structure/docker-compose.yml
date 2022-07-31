@@ -45,3 +45,10 @@ services:
       - "3000:3000"
     volumes:
       - ../frontend:/var/www/
+  certbot:
+    image: certbot/certbot:latest
+    command: certonly --webroot --webroot-path=/var/www/certbot --email ithub-company@yandex.ru --agree-tos --no-eff-email -d ithub-portal.ru -d www.ithub-portal.ru
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/logs:/var/log/letsencrypt
+      - ./certbot/data:/var/www/certbot
