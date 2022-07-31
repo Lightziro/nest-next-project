@@ -14,4 +14,7 @@ export class OrdersServices {
   async insert(data: CreateOrderDto): Promise<Order> {
     return await this.orderRepository.save(data);
   }
+  async getById(id: number): Promise<Order> {
+    return await this.orderRepository.findOneById(id);
+  }
 }

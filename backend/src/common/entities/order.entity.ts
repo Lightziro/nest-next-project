@@ -17,7 +17,7 @@ export class Order {
   @Column('varchar')
   email: string;
 
-  @Column('varchar')
+  @Column('varchar', { nullable: true, default: null })
   phone: string;
 
   @CreateDateColumn()
